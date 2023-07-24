@@ -1,0 +1,108 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/*  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+  background-color: #fefefe;
+  margin-bottom: 10px;
+}
+
+#content {
+  max-width: 75%;
+  margin: 10px 15% 20px 15%;
+}
+
+.article {
+  max-width: 100%;
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid #f1f1f1;
+  border-radius: 8px;
+  background-color: #fbfbfb;
+  overflow: auto;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 6px;
+  color: #141414;
+}
+
+.sub-title {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.author,
+.published-at,
+.source {
+  font-size: 12px;
+  color: #282828;
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.image {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.read-more {
+  background-color: #ffaeae;
+  border-radius: 8px;
+  padding: 8px;
+}
