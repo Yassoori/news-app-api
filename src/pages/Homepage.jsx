@@ -48,70 +48,72 @@ const Homepage = () => {
 
   return (
     <div>
+        <div id='search-bar'>
+            <h1>News Articles</h1>
 
-        <h1>News Articles</h1>
+            <div>
+                {/* Search Bar */}
+                <label htmlFor="search">Search</label>
+                <input 
+                    type="text" 
+                    name="search" 
+                    id="search"
+                    placeholder="Search"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
+            </div>
 
-        <div>
-            {/* Search Bar */}
-            <label htmlFor="search" id='search-label'>Search</label>
-            <input 
-                type="text" 
-                name="search" 
-                id="search"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-            />
-        </div>
+            {/* Country Select */}
+            <div>
+                <label htmlFor="country">Country:</label>
+                <select 
+                    name="country" 
+                    id="country"
+                    value={country}
+                    onChange={(e) => setCountry(e.target.value)}
+                >
+                    <option value="us">United States</option>
+                    <option value="in">India</option>
+                    <option value="gb">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                </select>
+            </div>
 
-        {/* Country Select */}
-        <div>
-            <label htmlFor="country">Country:</label>
-            <select 
-                name="country" 
-                id="country"
-                value={country}
-                onChange={(e) => setCountry(e.target.value)}
-            >
-                <option value="us">United States</option>
-                <option value="in">India</option>
-                <option value="gb">United Kingdom</option>
-                <option value="ca">Canada</option>
-            </select>
-        </div>
+            {/* Language Select */}
+            <div>
+                <label htmlFor="language">Language:</label>
+                <select 
+                    name="language" 
+                    id="language"
+                    value={language}
+                    onChange={(e) => setLanguage(e.target.value)}
+                >
+                    <option value="en">English</option>
+                    <option value="hi">Hidi</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                </select>
+            </div>
 
-        {/* Language Select */}
-        <div>
-            <label htmlFor="language">Language:</label>
-            <select 
-                name="language" 
-                id="language"
-                value={language}
-                onChange={(e) => setLanguage(e.target.value)}
-            >
-                <option value="en">English</option>
-                <option value="hi">Hidi</option>
-                <option value="es">Spanish</option>
-                <option value="fr">French</option>
-            </select>
-        </div>
-
-        {/* Topic Select */}
-        <div>
-            <label htmlFor="topic">Topic:</label>
-            <select 
-                name="topic" 
-                id="topic"
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-            >
-                <option value="general">General</option>
-                <option value="business">Business</option>
-                <option value="entertainment">Entertainment</option>
-                <option value="health">Health</option>
-                <option value="science">Science</option>
-                <option value="sports">Sports</option>
-                <option value="technology">Technology</option>
-            </select>
+            {/* Topic Select */}
+            <div>
+                <label htmlFor="topic">Topic:</label>
+                <select 
+                    name="topic" 
+                    id="topic"
+                    value={topic}
+                    onChange={(e) => setTopic(e.target.value)}
+                >
+                    <option value="general">General</option>
+                    <option value="business">Business</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="health">Health</option>
+                    <option value="science">Science</option>
+                    <option value="sports">Sports</option>
+                    <option value="technology">Technology</option>
+                </select>
+            </div>
         </div>
 
         {/* News Atricles Results */}
