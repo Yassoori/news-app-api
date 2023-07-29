@@ -32,8 +32,6 @@ Ciaran's instructions:
 
 > - Project Description
 
-> - Project Description
-
 > - List of npm packages and why we used them
 > - 2 x code snippet
 >   - one of the dynamic api call and one for context
