@@ -27,14 +27,20 @@
 
   ![This is what the site looks like as of Tuesday afternoon:](public/image/screenshot-for-readme.png)
 
-Ciaran's instructions
+Ciaran's instructions:
 :pinched_fingers::call_me_hand::palms_up_together:
 
-> Project Description
-> List of npm packages and why we used them
-> 2 x code snippet - one of the dynamic api call and one for context - write your understanding of how these work in the app
-> Link to NewsApi.org
-> 3 emojis
-> Different heading and text styles
-> Place a quote in quotation marks - can be you favourite or news related
-> Display Image
+> - Project Description
+
+> - Project Description
+
+> - List of npm packages and why we used them
+> - 2 x code snippet
+>   - one of the dynamic api call and one for context
+>   - write your understanding of how these work in the app
+
+> - Link to NewsApi.org
+> - 3 emojis
+> - Different heading and text styles
+> - Place a quote in quotation marks - can be you favourite or news related
+> - Display Image

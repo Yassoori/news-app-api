@@ -124,7 +124,7 @@ const Homepage = () => {
             (
                news.map((item) => (
                 <div id='content'>
-                   <div key={item.url} className='article'>
+                   <div key={item.url} className='article' >
                        <h2 className='title'>{item.title}</h2>
                        <div className='sub-title'>
                         <p className='author'>{item.author}</p>
