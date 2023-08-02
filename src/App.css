@@ -3,44 +3,6 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-/* -------------------- */
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -61,17 +23,18 @@ body {
   text-align: center;
   margin-bottom: 20px;
   padding: 10px;
-  background: #2e2e2e;
+  background: #fefefe;
   width: 100%;
+  border-bottom: solid 2px #c70000;
 }
 
 #nav-menu {
   display: flex;
   justify-content: space-around;
   list-style: none;
-  color: #fefefe;
+  /* color: #fefefe; */
   text-decoration: none;
-  margin: 16px 15% 16px 15%;
+  margin: 8px 15% 8px 15%;
 }
 
 .nav-link {
@@ -91,6 +54,7 @@ body {
   margin-bottom: 20px;
   padding-left: 15%;
   padding-right: 15%;
+  border-bottom: solid 2px #c70000;
 }
 
 h1 {
@@ -110,33 +74,34 @@ select {
 
 /* article cards */
 
-#content {
-  max-width: 75%;
-  margin: 10px 15% 20px 15%;
+.content {
+  max-width: 40%;
+  margin: auto;
 }
 
 .article {
   max-width: 100%;
   padding: 24px;
   margin-bottom: 20px;
-  border: 1px solid #2e2e2e;
-  border-radius: 8px;
-  background-color: #fbfbfb;
+  border-bottom: solid 2px #c70000;
+  /* border-radius: 8px; */
+  background-color: #fefefe;
   overflow: auto;
 }
 
-.title {
+.title,
+.yassername {
   font-size: 18px;
   margin-bottom: 16px;
   color: #141414;
   text-align: justify;
 }
 
-.sub-title {
+.source-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .author,
@@ -149,19 +114,35 @@ select {
 .description {
   font-size: 16px;
   margin-bottom: 16px;
-  text-align: justify;
+  text-align: left;
 }
 
 .image {
   max-width: 100%;
-  border-radius: 8px;
+  border-radius: 2px;
   margin-bottom: 8px;
 }
 
 .read-more {
   color: #fbfbfb;
-  background-color: #2e2e2e;
-  border-radius: 8px;
+  background-color: #c70000;
+  border-radius: 1px;
   border: none;
   padding: 8px 16px 8px 16px;
+}
+
+.yassercontent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 50%;
+  margin: auto;
+}
+
+.yasserimage,
+.yassertext {
+  max-width: 40%;
+  border-radius: 2px;
+  margin: 0 8px 8px 8px;
+  object-fit: cover;
 }

@@ -4,6 +4,7 @@ import { ArticleContextProvider } from './context/ArticleContext';
 
 // import of pages:
 import Homepage from './pages/Homepage'
+import About from './pages/About'
 // import of components:
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           {/* Set up individual routes */}
           <Route exact path='/' element={<Homepage/>} />
+          <Route path='/about/' element={<About/>}/>
           {/* Route for each addtional page or component */}
           <Route exact path='/article/' element={<SingleArticle/>} />
         </Routes>

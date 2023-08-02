@@ -42,3 +42,38 @@ Ciaran's instructions:
 > - Different heading and text styles
 > - Place a quote in quotation marks - can be you favourite or news related
 > - Display Image
+
+## Formative 3.1
+
+## \***\*FRONT-END CLIENT APP\*\***
+
+### Objectives
+
+For this project, you should be able to:
+
+- Use an external API to produce a web interface
+- Utilise a Javascript framework or User Interface Library to produce an industry-standard single page application
+- Optimise a client-side application for production
+
+### Overview
+
+Utilise a Javascript framework or User Interface Library to create a single-page application that allows the user to browse items retrieved from an external API.
+
+The app will be a news app that allows users to view news stories from around the world. It will use the News API (https://newsapi.org)
+
+The basic use cases for the application are:
+
+- View Article List
+- View About Page (about the developer, you, and this project) xxxxxsortaxxxxx
+
+The application can be extended with the following use cases:
+
+- Search Articles by Search Term xxxxxxxxxxx
+- Filter Articles by Country or Category or Source xxxxxxxxxx
+
+The application should take advantage of the built-in features of the Javascript framework. Where features don't exist, you can use third party libraries.  Use the framework and any number of libraries to:
+
+- Implement navigation to different screens xxxxxxxxxxx
+- Handle XMLHttpRequests (requests to the News API server) xxxxxxxxxxx
+- Create components that communicate with each other. For example, the component that allows the user to filter articles could communicate with the list component xxxxxxxxxx
+- Implement styles xxxxxsortaxxxxx
