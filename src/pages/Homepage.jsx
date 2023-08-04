@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import axios from "axios";
-import { Puff } from "react-loader-spinner";
+import { Oval } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 import { ArticleContext } from "../context/ArticleContext";
 
@@ -12,9 +12,10 @@ const Homepage = () => {
   const { setSelectedArticle } = useContext(ArticleContext);
   // useState definitions for all our inputs:
   const [searchTerm, setSearchTerm] = useState("");
-  const [country, setCountry] = useState("us");
-  const [language, setLanguage] = useState("en");
+  const [country, setCountry] = useState("");
   const [topic, setTopic] = useState("general");
+  const [language, setLanguage] = useState("en");
+  const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
   // set a state for news (all my articles)
   const [news, setNews] = useState([]);
   // const [newsList, setNewsList] = useState([]);
@@ -73,10 +74,56 @@ const Homepage = () => {
   return (
     <div>
       <div id="search-bar">
-        <h1>News Articles</h1>
-
+        <button
+          onClick={(e) => setTopic(e.target.value)}
+          className="topic-button"
+          value="general"
+        >
+          General
+        </button>
+        <button
+          onClick={(e) => setTopic(e.target.value)}
+          className="topic-button"
+          value="business"
+        >
+          Business
+        </button>
+        <button
+          onClick={(e) => setTopic(e.target.value)}
+          className="topic-button"
+          value="entertainment"
+        >
+          Entertainment
+        </button>
+        <button
+          onClick={(e) => setTopic(e.target.value)}
+          className="topic-button"
+          value="health"
+        >
+          Health
+        </button>
+        <button
+          onClick={(e) => setTopic(e.target.value)}
+          className="topic-button"
+          value="science"
+        >
+          Science
+        </button>
+        <button
+          onClick={(e) => setTopic(e.target.value)}
+          className="topic-button"
+          value="sports"
+        >
+          Sports
+        </button>
+        <button
+          onClick={(e) => setTopic(e.target.value)}
+          className="topic-button"
+          value="technology"
+        >
+          Technology
+        </button>
         <div>
-          {/* Search Bar */}
           <input
             type="text"
             name="search"
@@ -86,80 +133,121 @@ const Homepage = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-
-        {/* Country Select */}
-        <div>
-          <label htmlFor="country">Country:</label>
-          <select
-            name="country"
-            id="country"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
+        <button
+          onClick={() => setLanguageDropdownOpen(!languageDropdownOpen)}
+          className="language-button"
+        >
+          {language}
+        </button>
+        <div
+          id="language-dropdown"
+          style={
+            languageDropdownOpen
+              ? { visibility: "visible", width: "100px" }
+              : { visibility: "hidden", width: "0" }
+          }
+        >
+          <button
+            onClick={(e) => setLanguage(e.target.value)}
+            className="language-button"
+            value="en"
           >
-            <option value="us">United States</option>
-            <option value="gb">United Kingdom</option>
-            <option value="fr">France</option>
-            <option value="mx">Mexico</option>
-            <option value="cn">China</option>
-            <option value="ru">Russia</option>
-            <option value="sa">Saudi Arabia</option>
-          </select>
-        </div>
-
-        {/* Language Select */}
-        <div>
-          <label htmlFor="language">Language:</label>
-          <select
-            name="language"
-            id="language"
-            value={language}
-            onChange={(e) => setLanguage(e.target.value)}
+            English
+          </button>
+          <button
+            onClick={(e) => setLanguage(e.target.value)}
+            className="language-button"
+            value="fr"
           >
-            <option value="en">English</option>
-            <option value="fr">French</option>
-            <option value="es">Spanish</option>
-            <option value="cn">Simplified Chinese</option>
-            <option value="ar">Arabic</option>
-            <option value="ru">Russian</option>
-          </select>
-        </div>
-
-        {/* Topic Select */}
-        <div>
-          <label htmlFor="topic">Topic:</label>
-          <select
-            name="topic"
-            id="topic"
-            value={topic}
-            onChange={(e) => setTopic(e.target.value)}
+            French
+          </button>
+          <button
+            onClick={(e) => setLanguage(e.target.value)}
+            className="language-button"
+            value="ar"
           >
-            <option value="general">General</option>
-            <option value="business">Business</option>
-            <option value="entertainment">Entertainment</option>
-            <option value="health">Health</option>
-            <option value="science">Science</option>
-            <option value="sports">Sports</option>
-            <option value="technology">Technology</option>
-          </select>
+            Arabic
+          </button>
+          <button
+            onClick={(e) => setLanguage(e.target.value)}
+            className="language-button"
+            value="ru"
+          >
+            Russian
+          </button>
+          {/* </select> */}
         </div>
       </div>
 
-      {/* News Atricles Results */}
+      <div id="side-bar">
+        <div id="country-container">
+          <button
+            onClick={(e) => setCountry(e.target.value)}
+            className="country-button"
+            value=""
+          >
+            World
+          </button>
+          <button
+            onClick={(e) => setCountry(e.target.value)}
+            className="country-button"
+            value="us"
+          >
+            United States
+          </button>
+          <button
+            onClick={(e) => setCountry(e.target.value)}
+            className="country-button"
+            value="gb"
+          >
+            United Kingdom
+          </button>
+          <button
+            onClick={(e) => setCountry(e.target.value)}
+            className="country-button"
+            value="fr"
+          >
+            France
+          </button>
+          <button
+            onClick={(e) => setCountry(e.target.value)}
+            className="country-button"
+            value="sa"
+          >
+            Saudi Arabia
+          </button>
+          <button
+            onClick={(e) => setCountry(e.target.value)}
+            className="country-button"
+            value="ru"
+          >
+            Russia
+          </button>
+        </div>
+      </div>
       <div>
         <div className="content">
           {loading ? (
-            <Puff
-              color="#00BFFF"
-              height={100}
-              width={100}
-              position="absolute"
-              top="30%"
-            />
+            <div className="loader">
+              <Oval
+                color="#141414"
+                secondaryColor="#c70000"
+                height={100}
+                width={100}
+              />
+            </div>
           ) : news.length === 0 ? (
             <p>No Articles Found</p>
           ) : (
             news.map((item) => (
-              <div key={item.url} className="article">
+              <div
+                key={item.url}
+                className="article"
+                onClick={() => {
+                  item.onSelect();
+                  navigate("/article/");
+                }}
+              >
                 <h2 className="title">{item.title}</h2>
                 <img src={item.urlToImage} alt={item.title} className="image" />
                 <p className="description">{item.description}</p>
@@ -168,15 +256,6 @@ const Homepage = () => {
                   <p className="source">{item.source.name}</p>
                   <p className="published-at">{item.publishedAt}</p>
                 </div>
-                <button
-                  onClick={() => {
-                    item.onSelect();
-                    navigate("/article/");
-                  }}
-                  className="read-more"
-                >
-                  Read More
-                </button>
               </div>
             ))
           )}
